@@ -21,8 +21,8 @@
     <h1>Densidad poblacional</h1>
     <div id='map'></div>
 
-    <script src="js/riqespecies_avesacures-cr_ramsar-2017-wgs84.js" type="text/javascript"></script>
-    <script src="js/regPresGBIFAvesAcuRes-cr_ramsar-2017-wgs84.js"  type="text/javascript"></script>
+ //   <script src="js/riqespecies_avesacures-cr_ramsar-2017-wgs84.js" type="text/javascript"></script>
+ //   <script src="js/regPresGBIFAvesAcuRes-cr_ramsar-2017-wgs84.js"  type="text/javascript"></script>
     <script src="js/Cantones2014wgs84.js"  type="text/javascript"></script>
 
     <script>
@@ -100,45 +100,45 @@
     //  riqueza.addTo(mapa);
 	    
 	    
-      function infoPresencia(feature, layer) {
-	var popupContent = "";
-	if (feature.properties && feature.properties.scientif_1) {
-	  popupContent += feature.properties.scientif_1;
-	}
-	layer.bindPopup(popupContent);
-      }	    
+//      function infoPresencia(feature, layer) {
+//	var popupContent = "";
+//	if (feature.properties && feature.properties.scientif_1) {
+///	  popupContent += feature.properties.scientif_1;
+//	}
+//	layer.bindPopup(popupContent);
+  //    }	    
 	    
 	    
-      registrosPresencia = L.geoJson(regpresencia, {
-        style: function (feature) {
-	  return {
-            fillColor: '#0000ff', 
-            color: '#ffffff'
-          };
-        },
+//      registrosPresencia = L.geoJson(regpresencia, {
+//        style: function (feature) {
+//	  return {
+//            fillColor: '#0000ff', 
+//            color: '#ffffff'
+//          };
+//        },
         
-	pointToLayer: function (feature, latlng) {
-	  return L.circleMarker(latlng, {
-	    radius: 3,
-	    fillColor: "#ff7800",
-	    color: "#000",
-	    weight: 1,
-	    opacity: 1,
-	    fillOpacity: 0.8
-	  });
-	},
+///	pointToLayer: function (feature, latlng) {
+//	  return L.circleMarker(latlng, {
+//	    radius: 3,
+///	    fillColor: "#ff7800",
+//	    color: "#000",
+//	    weight: 1,
+//	    opacity: 1,
+//	    fillOpacity: 0.8
+//	  });
+//	},
 	      
-	onEachFeature: infoPresencia
-      })
-      registrosPresencia.addTo(mapa);	    
+//	onEachFeature: infoPresencia
+//      })
+//      registrosPresencia.addTo(mapa);	    
 	    
       var baseLayers = {
 	"OpenStreetMap": osm,
 	"MapBox" : mbox
       };
       var overlays = {
-	"Riqueza de especies": riqueza,
-	"Registros de presencia": registrosPresencia,
+//	"Riqueza de especies": riqueza,
+//	"Registros de presencia": registrosPresencia,
 	"Densidad poblacional": poblacion
       };
       L.control.layers(baseLayers, overlays).addTo(mapa);
