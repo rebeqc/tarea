@@ -57,10 +57,10 @@
       
     
       function infoRiqueza(feature, layer) {
-	var popupContent = "Riqueza de especies";
+	var popupContent = "Riqueza de especies: ";
 	if (feature.properties && feature.properties.spprichnes) {
 	  popupContent += feature.properties.spprichnes;
-	} else } 
+	} else {
 	  popupContent += 0;
 	} 
         layer.bindPopup(popupContent);
