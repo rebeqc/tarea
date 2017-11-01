@@ -38,7 +38,7 @@
       });    
       osm.addTo(mapa);
 	    
-      // retorna un color con base en la cantidad de especies
+      // retorna un color con base en la densidad poblacional
       function color(d) {
 	return d > 230000 ? '#d7191c' :
 	       d > 170000 ? '#fec980' :
@@ -72,21 +72,6 @@
       })
       dpoblacion.addTo(mapa);
       
-    
-
-	      
-//	onEachFeature: infoRiqueza
-  //    })
-    //  riqueza.addTo(mapa);
-	    
-	    
-//      function infoPresencia(feature, layer) {
-//	var popupContent = "";
-//	if (feature.properties && feature.properties.scientif_1) {
-///	  popupContent += feature.properties.scientif_1;
-//	}
-//	layer.bindPopup(popupContent);
-  //    }	    
 	    
 	    
 //      registrosPresencia = L.geoJson(regpresencia, {
