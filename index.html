@@ -73,8 +73,8 @@
 	    
        function infoCanton(feature, layer) {
 	var popupContent = "Cantón: ";
-	if (feature.properties && feature.properties.CANTO) {
-	  popupContent += feature.properties.CANTO;
+	if (feature.properties && feature.properties.NCANTON) {
+	  popupContent += feature.properties.NCANTON;
 	} else {
 	  popupContent += 0; 
 	}
@@ -89,7 +89,7 @@
 	     color: 'white',
 	     dashArray: '3',
 	     fillOpacity: 0.7,
-	     fillColor: color(feature.properties.CANTO)
+	     fillColor: color(feature.properties.NCANTON)
 	  };
         },
 	      
