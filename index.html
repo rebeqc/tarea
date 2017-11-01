@@ -97,8 +97,6 @@
       })
       canton.addTo(mapa);
 	    
-           
-	    
       var baseLayers = {
 	"OpenStreetMap": osm,
 	"MapBox" : mbox
@@ -108,6 +106,7 @@
 	"Densidad poblacional": poblacion,
 	"Cantón": canton
       };
+	    
       L.control.layers(baseLayers, overlays).addTo(mapa);
 	    
       L.control.mousePosition().addTo(mapa);
