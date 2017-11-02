@@ -25,7 +25,7 @@
     <script src="js/Cantones2014wgs84.js"  type="text/javascript"></script>
 
     <script>
-      var mapa = L.map('map').setView([9.5, -84], 9);
+      var mapa = L.map('map').setView([9.5, -84], 8);
       var osm  = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
         attribution: '<a href="http://www.openstreetmap.org/">OpenStreetMap</a>'
       });
@@ -73,31 +73,31 @@
       dpoblacion.addTo(mapa);
 	    
 	    
-//       function infoCanton(feature, layer) {
-//	var popupContent = "Cantón: ";
-//	if (feature.properties && feature.properties.NCANTON) {
-//	  popupContent += feature.properties.NCANTON;
-//	} else {
-//	  popupContent += 0; 
-//	}
-//	layer.bindPopup(popupContent);
-//      }	    	
+       function infoCanton(feature, layer) {
+	var popupContent = "Cantón: ";
+	if (feature.properties && feature.properties.NCANTON) {
+	  popupContent += feature.properties.NCANTON;
+	} else {
+	  popupContent += 0; 
+	}
+	layer.bindPopup(popupContent);
+      }	    	
 	    
-//       var canton = L.geoJson(poblacion, {
-//         style: function (feature) {
-//	   return {
-//            weight: 2,
-//	     opacity: 1,
-//	     color: 'white',
-//	     dashArray: '3',
-//	     fillOpacity: 0.7,
-//	     fillColor: color(feature.properties.NCANTON)
-//	  };
-//        },
-//	      
-//	onEachFeature: infoCanton
-//      })
-//      canton.addTo(mapa);
+       var canton = L.geoJson(poblacion, {
+         style: function (feature) {
+	   return {
+            weight: 2,
+	     opacity: 1,
+	     color: 'white',
+	     dashArray: '3',
+	     fillOpacity: 0.7,
+	     fillColor: color(feature.properties.NCANTON)
+	  };
+        },
+	      
+	onEachFeature: infoCanton
+      })
+      canton.addTo(mapa);
 	    
       var baseLayers = {
 	"OpenStreetMap": osm,
@@ -105,7 +105,7 @@
       };
 	    
       var overlays = {
-	"Densidad poblacional": poblacion,
+	"Densidad poblacional": dpoblacion,
 	"Cantón": canton
       };
 	    
