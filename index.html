@@ -46,8 +46,7 @@
 		           '#fee5d9';
       }	  
 	    
-        
-       function infoPoblacion(feature, layer) {
+      function infoPoblacion(feature, layer) {
 	var popupContent = "";
 	
 	if (feature.properties && feature.properties.NCANTON) {
@@ -141,7 +140,7 @@
 	    
       var overlays = {
 	"Densidad poblacional": dpoblacion,
-	"Cantón": canton
+//	"Cantón": canton
       };
 	    
       L.control.layers(baseLayers, overlays).addTo(mapa);
