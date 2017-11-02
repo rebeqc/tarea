@@ -61,13 +61,10 @@
 	    
 	    
       function infoPoblacion(feature, layer) {
-	var popupContent = " ";
+	var popupContent = "Densidad";
 	if (feature.properties && feature.properties.POB_2011_T) {
-	  popupContent += "<b>Densidad</b>" feature.properties.POB_2011_T;
+	  popupContent += feature.properties.POB_2011_T;
 
-	if (feature.properties && feature.properties.POB_2011_T) {
-	  popupContent += "<b>Cantón</b>" feature.properties.NCANTON;	
-		
 	} else {
 	  popupContent += 0; 
 	}
