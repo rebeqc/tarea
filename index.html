@@ -52,14 +52,13 @@
 	  popupContent += "<br><b>Densidad:</b>" feature.properties.POB_2011_T;
         if (feature.properties && feature.properties.NCANTON) {
 	  popupContent += "<br><b>Cantón</b>" feature.properties.NCANTON;		
-	} else {
+        } else {
 	  popupContent += 0; 
 	
-	  
 	}
 	layer.bindPopup(popupContent);
       }	    	
-	    
+      }   
        var dpoblacion = L.geoJson(poblacion, {
          style: function (feature) {
 	   return {
