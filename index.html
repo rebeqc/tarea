@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>tarea2</title>
+    <title>Examen</title>
 
     <meta charset="UTF-8" />
 	
@@ -21,7 +21,7 @@
      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.1.7/leaflet-providers.js"></script>
 	
   <body>
-    <h1>Poblacional por cantones en Costa Rica</h1>
+    <h1>Población por cantones en Costa Rica</h1>
     <div id='map'></div>
 	  
     
@@ -41,11 +41,11 @@
       osm.addTo(mapa);
 	    
        // Capa de tipo L.tileLayer definida con el complemento Leaflet-providers
-      var sta = L.tileLayer.provider('Stamen.Watercolor');
-      sta.addTo(mapa);
+     var sta = L.tileLayer.provider('Stamen.Watercolor');
+     sta.addTo(mapa);
 	  
-      var surf = L.tileLayer.provider('OpenMapSurfer.Roads');
-      surf.addTo(mapa); 
+     var surf = L.tileLayer.provider('OpenMapSurfer.Roads');
+     surf.addTo(mapa); 
 	    
       // retorna un color con base en la poblacón
       function color(d) {
