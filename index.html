@@ -68,6 +68,11 @@
         });
 	wmsLayer2.addTo(mapa);
 	    
+       var wmsLayer3 = L.tileLayer.wms('http://geos.snitcr.go.cr/be/IGN_1/wms?', {
+        layers: 'curvas'
+        });
+	wmsLayer3.addTo(mapa);
+	    
       // retorna un color con base en la poblacón
       function color(d) {
 	return d > 230000 ? '#a50f15' :
@@ -116,7 +121,8 @@
 	"OpenMapSurfer.Roads" : surf,
 	"Stamen_Toner" : Stamen_Toner,
 	"Provincias" : wmsLayer,
-	"Vías": wmsLayer2 
+	"Vías": wmsLayer2,
+	"Curvas": wmsLayer3 
       };
 	    
       var overlays = {
