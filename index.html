@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="https://cdn.rawgit.com/ardhi/Leaflet.MousePosition/master/src/L.Control.MousePosition.css"/>	  
   </head>
 
+     <!-- Referencia al complemento Leaflet-providers -->	 
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.1.7/leaflet-providers.js"></script>
+	
   <body>
     <h1>Poblacional por cantones en Costa Rica</h1>
     <div id='map'></div>
@@ -36,6 +39,13 @@
     	accessToken: 'pk.eyJ1IjoibXZhcmdhcyIsImEiOiJRc3ZyTmZzIn0.npefgTinHjwxhTt8fjzeIw'
       });    
       osm.addTo(mapa);
+	    
+       // Capa de tipo L.tileLayer definida con el complemento Leaflet-providers
+      var sta = L.tileLayer.provider('Stamen.Watercolor');
+      sta.addTo(mapa);
+	  
+      var surf = L.tileLayer.provider('OpenMapSurfer.Roads');
+      surf.addTo(mapa); 
 	    
       // retorna un color con base en la poblacón
       function color(d) {
@@ -80,7 +90,9 @@
 	    	    	    
       var baseLayers = {
 	"OpenStreetMap": osm,
-	"MapBox" : mbox
+	"MapBox" : mbox,
+	"Stamen Watercolor" : sta,
+	"OpenMapSurfer.Roads" : surf
       };
 	    
       var overlays = {
