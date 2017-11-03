@@ -46,6 +46,8 @@
 	  
      var surf = L.tileLayer.provider('OpenMapSurfer.Roads');
      surf.addTo(mapa); 
+
+    
 	    
      var wmsLayer = L.tileLayer.wms('http://geos.snitcr.go.cr/be/IGN_5/wms?', {
         layers: 'limiteprovincial_5k'
@@ -98,6 +100,7 @@
 	"MapBox" : mbox,
 	"Stamen Watercolor" : sta,
 	"OpenMapSurfer.Roads" : surf,
+	"Stamen_Toner" : Stamen_Toner,
 	"Provincias" : wmsLayer
       };
 	    
